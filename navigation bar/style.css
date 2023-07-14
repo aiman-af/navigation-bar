@@ -1,0 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace, system-ui, 'Segoe UI' 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    background-color: rgb(2, 65, 71);
+    height: 300px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 200px;
+    line-height: 250px;
+    padding: 0px 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 250px;
+    margin: 0px 30px;
+    font-size: 130px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 34px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+a.active,
+a:hover {
+    background-color: rgb(69, 119, 123);
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 70px;
+        height: 60px;
+        background-color: rgb(2, 65, 71);
+        top: 55;
+        left:55 ;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin:44 ;
+        line-height: 90px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background-color: none;
+        color: rgb(2, 65, 71);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    section{
+        background: url('hassan.jpg') no-repeat;
+        background-size: cover;
+        height: calc(100vh-80px)
+    }
+}
